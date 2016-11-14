@@ -6,7 +6,7 @@ __author__ = 'oleh.hrebchuk'
 class GetConfig(object):
     def get_value_confing(self, section, key):
         configParser = ConfigParser.RawConfigParser()
-        configFilePath = r'wakeonlan.conf'
+        configFilePath = r'/root/repwakeonlan/wakeonlan.conf'
         configParser.read(configFilePath)
         value = configParser.get(section, key)
         return value

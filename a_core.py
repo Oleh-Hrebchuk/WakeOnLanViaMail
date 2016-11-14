@@ -33,32 +33,42 @@ class Manager(SSHManage, Patterns, WakeOnLan, ManageGatesTable, ManageHostsTable
                 try:
                     if host.startswith(sbj):
                         get_host = host[len(sbj):]
+                        print get_host
                         if self.regex_ip(get_host):
                             self.macaddress = self.get_mac_via_ip(get_host)
                             self.broadcast = self.get_broadcast(get_host)
                             self.eth = self.g.get_eth_via_brod(self.get_broadcast(get_host))[0][0]
+                            print self.macaddress, self.broadcast,self.eth
                             self.wake_on_lan()
+                            print '---------------'
                         else:
                             if host.endswith(self.domain):
                                 self.macaddress = self.get_mac_via_hostname(get_host.lower())[0][0]
                                 ip = self.get_ip_via_hostname(get_host.lower())[0][0]
                                 self.broadcast = self.get_broadcast(ip)
                                 self.eth = self.g.get_eth_via_brod(self.get_broadcast(ip))[0][0]
+                                print self.macaddress, self.broadcast,self.eth
                                 self.wake_on_lan()
+                                print '---------------'
                             else:
                                 host = get_host + self.domain
+                                print host
                                 self.macaddress = self.get_mac_via_hostname(host.lower())[0][0]
                                 ip = self.get_ip_via_hostname(host)[0][0]
                                 self.broadcast = self.get_broadcast(ip)
-                                self.eth = self.g.get_eth_via_brod(self.get_broadcast(ip))[0][0][0]
+                                self.eth = self.g.get_eth_via_brod(self.get_broadcast(ip))[0][0]
+                                print self.macaddress, self.broadcast,self.eth
                                 self.wake_on_lan()
+                                print '---------------'
                     else:
                         pass
                 except Exception as e:
                     self.loger(e,'info')
+
                     continue
         except Exception as e:
             self.loger(e,'info')
+            print e
 
 c = Manager()
 c.call_wakeonlan()

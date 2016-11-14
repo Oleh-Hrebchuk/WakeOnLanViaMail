@@ -21,7 +21,6 @@ class ManageDB(GetConfig, LoggingData):
         cur.execute('''CREATE TABLE {} (id INTEGER PRIMARY KEY AUTOINCREMENT)'''.format(self.table_name))
 
     def add_columns(self, *args):
-        print args
         cur = self.db_connect().cursor()
         for i in args:
             cur.execute("ALTER TABLE {} ADD COLUMN {} INTEGER".format(self.table_name, i))

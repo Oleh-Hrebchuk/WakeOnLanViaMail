@@ -1,8 +1,9 @@
 #!/usr/bin/python
-__author__ = 'oleh.hrebchuk'
+
 import socket
 import struct
 from sys import argv
+__author__ = 'oleh.hrebchuk'
 
 
 class WakeOnLan(object):

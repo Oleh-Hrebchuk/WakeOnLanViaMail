@@ -1,0 +1,8 @@
+You need copy all files from this directory to system which has access to all segments with broadcast.
+And configure this scripts also you can place this script localy and use 127.0.0.1.
+Don't forget configure with djngo server and script-host add ssh via authority keys.
+scp -R * host@user:/place
+#scheme
+1. user send mail with computer name
+2. wakeonlan-server-> get last mails from server -> wakeonlan-server ->send all network computers
+Change path configFilePath in c_config_parce.py

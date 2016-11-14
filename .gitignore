@@ -27,3 +27,4 @@ var/
 .installed.cfg
 *.egg
 *.sqlite3
+*.log

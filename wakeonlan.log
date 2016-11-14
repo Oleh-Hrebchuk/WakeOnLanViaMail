@@ -6,3 +6,9 @@
 2016-11-14 11:39:41,050 - c_logging - INFO - 'ip'
 2016-11-14 11:45:51,003 - c_logging - INFO - 'ip'
 2016-11-14 11:47:21,280 - c_logging - INFO - 'ip'
+2016-11-14 17:56:40,037 - c_logging - INFO - [Errno 22] Invalid argument
+2016-11-14 17:57:56,084 - c_logging - INFO - [Errno 22] Invalid argument
+2016-11-14 18:01:35,556 - c_logging - INFO - [Errno 22] Invalid argument
+2016-11-14 18:02:53,427 - c_logging - INFO - [Errno 22] Invalid argument
+2016-11-14 18:08:44,973 - c_logging - INFO - list index out of range
+2016-11-14 18:11:21,927 - c_logging - INFO - can only concatenate list (not "str") to list
