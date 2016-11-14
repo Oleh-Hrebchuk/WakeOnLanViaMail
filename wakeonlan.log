@@ -1,0 +1,8 @@
+2016-11-14 01:51:41,599 - c_logging - INFO - [Errno 22] Invalid argument
+2016-11-14 01:52:06,741 - c_logging - INFO - [Errno 22] Invalid argument
+2016-11-14 01:55:01,634 - c_logging - WARNING - [Errno 22] Invalid argument
+2016-11-14 01:58:23,686 - c_logging - INFO - [Errno 22] Invalid argument
+2016-11-14 11:33:47,105 - c_logging - INFO - 'ip'
+2016-11-14 11:39:41,050 - c_logging - INFO - 'ip'
+2016-11-14 11:45:51,003 - c_logging - INFO - 'ip'
+2016-11-14 11:47:21,280 - c_logging - INFO - 'ip'
