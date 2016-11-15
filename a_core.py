@@ -1,3 +1,4 @@
+import time
 from b_database_manager import *
 from c_wake_on_lan import WakeOnLan
 from c_ssh_manager import SSHManage
@@ -16,10 +17,13 @@ class Manager(SSHManage, Patterns, WakeOnLan, ManageGatesTable, ManageHostsTable
     def __init__(self):
         self.name_db = self.get_value_confing('database', 'name_db')
         self.ssh_user = self.get_value_confing('general', 'ssh_user')
+        self.get_mail_com = self.get_value_confing('general', 'get_mail_com')
         self.key_filename = self.get_value_confing('general','key_filename')
         self.ssh_host = self.get_value_confing('general','ssh_host')
         self.path_mail = self.get_value_confing('general','path_mail')
         self.domain = self.get_value_confing('general', 'domain')
+
+
         WakeOnLan.__init__(self)
 
     def call_wakeonlan(self):
@@ -29,6 +33,11 @@ class Manager(SSHManage, Patterns, WakeOnLan, ManageGatesTable, ManageHostsTable
         """
         sbj = 'Subject: '
         try:
+            #delete old mails
+            self.ssh_rem_comand(self.ssh_host, self.ssh_user, self.key_filename, 'rm -f {}'.format(self.path_mail))
+            #get mails
+            self.ssh_rem_comand(self.ssh_host, self.ssh_user, self.key_filename, self.get_mail_com)
+            time.sleep(15)
             for host in self.ssh_read_data(self.ssh_host, self.path_mail, self.key_filename, self.ssh_user).split('\n'):
                 try:
                     if host.startswith(sbj):
@@ -72,3 +81,4 @@ class Manager(SSHManage, Patterns, WakeOnLan, ManageGatesTable, ManageHostsTable
 
 c = Manager()
 c.call_wakeonlan()
+

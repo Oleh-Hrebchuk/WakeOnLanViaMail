@@ -12,3 +12,29 @@
 2016-11-14 18:02:53,427 - c_logging - INFO - [Errno 22] Invalid argument
 2016-11-14 18:08:44,973 - c_logging - INFO - list index out of range
 2016-11-14 18:11:21,927 - c_logging - INFO - can only concatenate list (not "str") to list
+2016-11-15 12:28:23,944 - c_logging - INFO - 'ip'
+2016-11-15 14:53:47,281 - c_logging - INFO - 'Manager' object has no attribute 'host'
+2016-11-15 14:54:02,997 - c_logging - INFO - 'Manager' object has no attribute 'host'
+2016-11-15 14:55:12,172 - c_logging - INFO - 'Manager' object has no attribute 'host'
+2016-11-15 14:56:18,636 - c_logging - INFO - 'Manager' object has no attribute 'host'
+2016-11-15 14:57:39,587 - c_logging - INFO - 'Manager' object has no attribute 'host'
+2016-11-15 16:13:05,269 - c_logging - INFO - list index out of range
+2016-11-15 16:35:09,510 - c_logging - INFO - 'int' object is not callable
+2016-11-15 16:36:33,007 - c_logging - INFO - 'int' object is not callable
+2016-11-15 16:38:35,765 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:11:08,259 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:12:14,954 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:13:00,824 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:13:55,332 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:15:43,328 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:16:30,033 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:17:26,135 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:18:54,762 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:23:24,044 - c_logging - INFO - local variable 'text_data' referenced before assignment
+2016-11-15 17:24:50,288 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:26:33,787 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:28:20,602 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:30:00,160 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:33:29,209 - c_logging - INFO - 'int' object is not callable
+2016-11-15 17:35:45,240 - c_logging - INFO - 'int' object is not callable
+2016-11-15 18:01:22,981 - c_logging - INFO - list index out of range

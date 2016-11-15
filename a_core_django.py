@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import time
 from sys import argv
 from b_database_manager import *
 from c_wake_on_lan import WakeOnLan
@@ -17,10 +18,18 @@ class Manager(SSHManage, Patterns, WakeOnLan, ManageGatesTable, ManageHostsTable
     g = ManageGatesTable('gates')
 
     def __init__(self, *args):
-        self.host = str(argv[1])
+        print args
+        #self.host = str(argv[1])
         self.name_db = self.get_value_confing('database', 'name_db')
         self.key_filename = self.get_value_confing('general', 'key_filename')
         self.domain = self.get_value_confing('general', 'domain')
+        try:
+            if len(args) == 0:
+                self.host = str(argv[1])
+        except Exception as e:
+            print e
+
+
         WakeOnLan.__init__(self)
 
     def call_wakeonlan(self):
@@ -51,6 +60,8 @@ class Manager(SSHManage, Patterns, WakeOnLan, ManageGatesTable, ManageHostsTable
                     self.wake_on_lan()
         except Exception as e:
             self.loger(e, 'info')
+        time.sleep(10)
+        print self.ping('eth0','172.25.61.140')
 
 
 c = Manager()

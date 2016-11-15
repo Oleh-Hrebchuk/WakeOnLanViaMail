@@ -1,3 +1,4 @@
+import os
 import netifaces
 
 
@@ -29,3 +30,16 @@ class NetworkInformation(object):
             i += 1
         broad += '255'
         return broad
+
+    def ping(self, eth, host):
+        """
+        Chack if host is alive
+        :param eth: ping from alias
+        :param host: ping host
+        :return: 1 or 0
+        """
+        response = os.system('ping -c 1 -W 1 -I {} {} > /dev/null'.format(eth, host))
+        if response == 0:
+            return 0
+        else:
+            return 1
